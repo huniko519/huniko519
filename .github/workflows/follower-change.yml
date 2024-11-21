@@ -15,7 +15,7 @@ jobs:
           myToken: ${{ secrets.MY_TOKEN }}
           notifyUnFollowEvent: true
       - name: email me
-        uses: dawidd6/action-send-mail@v3
+        uses: dawidd6/action-send-mail@v4
         if: steps.followerChange.outputs.shouldNotify == 'true'
         with:
           server_address: ${{ secrets.MAIL_HOST }}
